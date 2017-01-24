@@ -1,0 +1,9 @@
+Ivysaur 60
+Charizard 90
+Squirtle 30
+Pikachu 60
+Jigglypuff 60
+Mewtwo 100
+Pichu 30
+Lucario 80
+Greninja 90

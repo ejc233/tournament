@@ -7,8 +7,8 @@ import java.util.ArrayList;
  */
 public class Round {
 	private ArrayList<Competitor> inputList;
-	private ArrayList<Competitor> winnerList = new ArrayList<Competitor>();
-	private ArrayList<Competitor> loserList = new ArrayList<Competitor>();
+	private ArrayList<Competitor> winners = new ArrayList<Competitor>();
+	private ArrayList<Competitor> losers = new ArrayList<Competitor>();
 	private int roundNumber;
 
 	/**
@@ -24,7 +24,7 @@ public class Round {
 		this.roundNumber = roundNumber;
 	}
 
-	public ArrayList<Competitor> runRound() {
+	public void runRound() {
 
 		for (int i = 0; i < inputList.size() / 2; i++) {
 			Competitor c1 = inputList.get(2 * i);
@@ -34,14 +34,31 @@ public class Round {
 			double r = Math.random() * completeStrength;
 
 			if (r <= c1.getStrength()) {
-				winnerList.add(c1);
-				loserList.add(c2);
+				winners.add(c1);
+				losers.add(c2);
 
 			} else {
-				winnerList.add(c2);
-				loserList.add(c2);
+				winners.add(c2);
+				losers.add(c2);
 			}
 		}
-		return winnerList;
+	}
+
+	/**
+	 * Get the winners of the round.
+	 * 
+	 * @return the winners of the round
+	 */
+	public ArrayList<Competitor> getWinners() {
+		return winners;
+	}
+
+	/**
+	 * Get the losers of the round.
+	 * 
+	 * @return the losers of the round
+	 */
+	public ArrayList<Competitor> getLosers() {
+		return losers;
 	}
 }

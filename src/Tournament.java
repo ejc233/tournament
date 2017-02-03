@@ -48,7 +48,9 @@ public class Tournament {
 			}
 
 			Round round = new Round(competitors, 1);
-			ArrayList<Competitor> orderedList = round.runRound();
+			round.runRound();
+
+			ArrayList<Competitor> orderedList = round.getWinners();
 
 			// Write the ranked list into the output file
 			writeFile(orderedList, outputFile);
@@ -74,7 +76,7 @@ public class Tournament {
 
 		// Write each string in the ranked list one by one
 		for (int i = 0; i < orderedList.size(); i++) {
-			writer.write(i + 1 + ". " + orderedList.get(i).getName());
+			writer.write(orderedList.get(i).getName());
 			if (i != orderedList.size() - 1) {
 				writer.newLine();
 			}

@@ -5,7 +5,8 @@
  */
 public class Competitor {
 	private String name;
-	private int strength;
+	private double strength;
+	private int seed;
 
 	/**
 	 * Constructor.
@@ -30,15 +31,6 @@ public class Competitor {
 	}
 
 	/**
-	 * Get the strength of the competitor.
-	 * 
-	 * @return the strength of the competitor
-	 */
-	public int getStrength() {
-		return strength;
-	}
-
-	/**
 	 * Set the name of the competitor.
 	 * 
 	 * @param name
@@ -49,12 +41,41 @@ public class Competitor {
 	}
 
 	/**
+	 * Get the strength of the competitor.
+	 * 
+	 * @return the strength of the competitor
+	 */
+	public double getStrength() {
+		return strength;
+	}
+
+	/**
 	 * Set the strength of the competitor.
 	 * 
 	 * @param strength
 	 *            the new strength of the competitor
 	 */
-	public void setStrength(int strength) {
+	public void setStrength(double strength) {
 		this.strength = strength;
 	}
+
+	/**
+	 * Get the seed of the competitor.
+	 * 
+	 * @return the seed of the competitor
+	 */
+	public int getSeed() {
+		return seed;
+	}
+
+	/**
+	 * Set the seed of the competitor.
+	 * 
+	 * @param seed
+	 *            the new seed of the competitor
+	 */
+	public void setSeed(int sseed) {
+		this.seed = seed;
+	}
+
 }

@@ -25,6 +25,10 @@ public class Round {
 	}
 
 	public void runRound() {
+		System.out.println("");
+		System.out.println("");
+		System.out.println("Round " + roundNumber);
+		System.out.println("------------------------------");
 
 		for (int i = 0; i < inputList.size() / 2; i++) {
 			Competitor c1 = inputList.get(2 * i);
@@ -34,13 +38,22 @@ public class Round {
 			double r = Math.random() * completeStrength;
 
 			if (r <= c1.getStrength()) {
+				System.out.println(c1.getName() + " beat " + c2.getName() + ".");
 				winners.add(c1);
 				losers.add(c2);
 
 			} else {
+				System.out.println(c2.getName() + " beat " + c1.getName() + ".");
 				winners.add(c2);
-				losers.add(c2);
+				losers.add(c1);
 			}
+		}
+		if (winners.size() == 1) {
+			System.out.println("");
+			System.out.println("");
+			System.out.println("Winner");
+			System.out.println("------------------------------");
+			System.out.println(winners.get(0).getName());
 		}
 	}
 

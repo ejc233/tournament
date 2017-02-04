@@ -1,9 +1,9 @@
-Greninja
-Ivysaur
 Charizard
-Pichu
-Pikachu
-Jigglypuff
-Lucario
 Mewtwo
+Pikachu
+Ivysaur
 Squirtle
+Greninja
+Lucario
+Jigglypuff
+Pichu

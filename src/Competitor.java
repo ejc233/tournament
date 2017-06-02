@@ -74,7 +74,7 @@ public class Competitor {
 	 * @param seed
 	 *            the new seed of the competitor
 	 */
-	public void setSeed(int sseed) {
+	public void setSeed(int seed) {
 		this.seed = seed;
 	}
 
